@@ -21,8 +21,8 @@
         "tags": [
           "Misc"
         ],
-        "summary": "Push Notification: 111 - General push",
-        "operationId": "PushNotification:111-Generalpush",
+        "summary": "Notification service",
+        "operationId": "Notification service",
         "parameters": [],
         "requestBody": {
           "description": "",
