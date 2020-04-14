@@ -280,6 +280,23 @@
                     "example": "CRM"
                   }
                 }
+              },
+              "examples": {
+                "JSON": {
+                  "summary": "JSON",
+                  "value": {
+                    "sessionCode": "COSMOS",
+                    "quantity": 100.0,
+                    "transferType": "DEPOSIT",
+                    "comment": "Comments",
+                    "actionCode": "1123",
+                    "id": 41320324
+                  }
+                },
+                "CURL": {
+                  "summary": "CURL",
+                  "value": "curl --location --request POST '{{domain}}/dxweb/rest/customers/Vasyl123/transfers' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--header 'Authorization: Basic cm9vdEBzeXN0ZW06cm9vdA==' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'amount=100' \\\n--data-urlencode 'transferType=DEPOSIT' \\\n--data-urlencode 'transferCode=1123' \\\n--data-urlencode 'comment=Comments' \\\n--data-urlencode 'requestSource=CRM'"
+                }
               }
             }
           },
@@ -342,7 +359,8 @@
                     "description": "This profiles will be activated"
                   }
                 }
-              }
+              },
+
             }
           },
           "required": false,
