@@ -1,0 +1,804 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Vamos-Standalone-notification-service",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://192.168.4.245:8859",
+      "variables": {
+        "port": {
+          "default": "DefaultParameterValue"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/notification": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Push Notification: 111 - General push",
+        "operationId": "PushNotification:111-Generalpush",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PushNotification%3A111-GeneralpushRequest"
+              },
+              "example": {
+                "customers": [
+                  {
+                    "id": "{{push.client.cid}}",
+                    "notifications": [
+                      {
+                        "id": 111
+                      }
+                    ],
+                    "params": {
+                      "subject": "test",
+                      "content": "it is time to trade!",
+                      "url": "cosmos://trade?platform=LIVE&symbol=EUR/USD&side=buy&quantity=1000&type=market"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/notification": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Push Notification: 100 - Margin call",
+        "operationId": "PushNotification:100-Margincall",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PushNotification%3A100-MargincallRequest"
+              },
+              "example": {
+                "customers": [
+                  {
+                    "id": "{{push.client.cid}}",
+                    "notifications": [
+                      {
+                        "id": 100,
+                        "params": {
+                          "marginStep": 70
+                        }
+                      }
+                    ],
+                    "params": {
+                      "customerId": "{{push.client.cid}}",
+                      "lang": "en",
+                      "tpid": "{{push.client.tpid}}",
+                      "test": false
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/notification": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Push Notification: 107 - Price Alert",
+        "operationId": "PushNotification:107-PriceAlert",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PushNotification%3A107-PriceAlertRequest"
+              },
+              "example": {
+                "customers": [
+                  {
+                    "id": "{{push.client.cid}}",
+                    "notifications": [
+                      {
+                        "id": 107,
+                        "params": {}
+                      }
+                    ],
+                    "params": {
+                      "lang": "en",
+                      "alertTitle": "Price is above",
+                      "symbol": "GOLD",
+                      "currency": "$",
+                      "value": 135,
+                      "alertText": "rises above",
+                      "instrument_currency": "$",
+                      "signAfterValue": "",
+                      "alertColor": "#2FB142",
+                      "emailAddress": "{{email.safecap}}",
+                      "subject": "Price alert: Gold (35$)",
+                      "alertDirection": "",
+                      "currTime": "2017-06-06 12:00:00"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/notification": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "In-platform: 109 - Price Alert",
+        "operationId": "In-platform:109-PriceAlert",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/In-platform%3A109-PriceAlertRequest"
+              },
+              "example": {
+                "customers": [
+                  {
+                    "id": "{{push.client.cid}}",
+                    "notifications": [
+                      {
+                        "id": 109
+                      }
+                    ],
+                    "params": {
+                      "lang": "en",
+                      "alertTitle": "Price is above",
+                      "symbol": "GOLD",
+                      "currency": "$",
+                      "value": 135,
+                      "instrument_currency": "$",
+                      "signAfterValue": ""
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": true,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PushNotification:111-GeneralpushRequest": {
+        "title": "PushNotification:111-GeneralpushRequest",
+        "required": [
+          "customers"
+        ],
+        "type": "object",
+        "properties": {
+          "customers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Customer"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "customers": [
+            {
+              "id": "{{push.client.cid}}",
+              "notifications": [
+                {
+                  "id": 111
+                }
+              ],
+              "params": {
+                "subject": "test",
+                "content": "it is time to trade!",
+                "url": "cosmos://trade?platform=LIVE&symbol=EUR/USD&side=buy&quantity=1000&type=market"
+              }
+            }
+          ]
+        }
+      },
+      "Customer": {
+        "title": "Customer",
+        "required": [
+          "id",
+          "notifications",
+          "params"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "notifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Notification"
+            },
+            "description": ""
+          },
+          "params": {
+            "$ref": "#/components/schemas/Params"
+          }
+        },
+        "example": {
+          "id": "{{push.client.cid}}",
+          "notifications": [
+            {
+              "id": 111
+            }
+          ],
+          "params": {
+            "subject": "test",
+            "content": "it is time to trade!",
+            "url": "cosmos://trade?platform=LIVE&symbol=EUR/USD&side=buy&quantity=1000&type=market"
+          }
+        }
+      },
+      "Notification": {
+        "title": "Notification",
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "id": 111
+        }
+      },
+      "Params": {
+        "title": "Params",
+        "required": [
+          "subject",
+          "content",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "subject": "test",
+          "content": "it is time to trade!",
+          "url": "cosmos://trade?platform=LIVE&symbol=EUR/USD&side=buy&quantity=1000&type=market"
+        }
+      },
+      "PushNotification:100-MargincallRequest": {
+        "title": "PushNotification:100-MargincallRequest",
+        "required": [
+          "customers"
+        ],
+        "type": "object",
+        "properties": {
+          "customers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Customer1"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "customers": [
+            {
+              "id": "{{push.client.cid}}",
+              "notifications": [
+                {
+                  "id": 100,
+                  "params": {
+                    "marginStep": 70
+                  }
+                }
+              ],
+              "params": {
+                "customerId": "{{push.client.cid}}",
+                "lang": "en",
+                "tpid": "{{push.client.tpid}}",
+                "test": false
+              }
+            }
+          ]
+        }
+      },
+      "Customer1": {
+        "title": "Customer1",
+        "required": [
+          "id",
+          "notifications",
+          "params"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "notifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Notification1"
+            },
+            "description": ""
+          },
+          "params": {
+            "$ref": "#/components/schemas/Params2"
+          }
+        },
+        "example": {
+          "id": "{{push.client.cid}}",
+          "notifications": [
+            {
+              "id": 100,
+              "params": {
+                "marginStep": 70
+              }
+            }
+          ],
+          "params": {
+            "customerId": "{{push.client.cid}}",
+            "lang": "en",
+            "tpid": "{{push.client.tpid}}",
+            "test": false
+          }
+        }
+      },
+      "Notification1": {
+        "title": "Notification1",
+        "required": [
+          "id",
+          "params"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "params": {
+            "$ref": "#/components/schemas/Params1"
+          }
+        },
+        "example": {
+          "id": 100,
+          "params": {
+            "marginStep": 70
+          }
+        }
+      },
+      "Params1": {
+        "title": "Params1",
+        "required": [
+          "marginStep"
+        ],
+        "type": "object",
+        "properties": {
+          "marginStep": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "marginStep": 70
+        }
+      },
+      "Params2": {
+        "title": "Params2",
+        "required": [
+          "customerId",
+          "lang",
+          "tpid",
+          "test"
+        ],
+        "type": "object",
+        "properties": {
+          "customerId": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          },
+          "tpid": {
+            "type": "string"
+          },
+          "test": {
+            "type": "boolean"
+          }
+        },
+        "example": {
+          "customerId": "{{push.client.cid}}",
+          "lang": "en",
+          "tpid": "{{push.client.tpid}}",
+          "test": false
+        }
+      },
+      "PushNotification:107-PriceAlertRequest": {
+        "title": "PushNotification:107-PriceAlertRequest",
+        "required": [
+          "customers"
+        ],
+        "type": "object",
+        "properties": {
+          "customers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Customer2"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "customers": [
+            {
+              "id": "{{push.client.cid}}",
+              "notifications": [
+                {
+                  "id": 107,
+                  "params": {}
+                }
+              ],
+              "params": {
+                "lang": "en",
+                "alertTitle": "Price is above",
+                "symbol": "GOLD",
+                "currency": "$",
+                "value": 135,
+                "alertText": "rises above",
+                "instrument_currency": "$",
+                "signAfterValue": "",
+                "alertColor": "#2FB142",
+                "emailAddress": "{{email.safecap}}",
+                "subject": "Price alert: Gold (35$)",
+                "alertDirection": "",
+                "currTime": "2017-06-06 12:00:00"
+              }
+            }
+          ]
+        }
+      },
+      "Customer2": {
+        "title": "Customer2",
+        "required": [
+          "id",
+          "notifications",
+          "params"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "notifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Notification2"
+            },
+            "description": ""
+          },
+          "params": {
+            "$ref": "#/components/schemas/Params3"
+          }
+        },
+        "example": {
+          "id": "{{push.client.cid}}",
+          "notifications": [
+            {
+              "id": 107,
+              "params": {}
+            }
+          ],
+          "params": {
+            "lang": "en",
+            "alertTitle": "Price is above",
+            "symbol": "GOLD",
+            "currency": "$",
+            "value": 135,
+            "alertText": "rises above",
+            "instrument_currency": "$",
+            "signAfterValue": "",
+            "alertColor": "#2FB142",
+            "emailAddress": "{{email.safecap}}",
+            "subject": "Price alert: Gold (35$)",
+            "alertDirection": "",
+            "currTime": "2017-06-06 12:00:00"
+          }
+        }
+      },
+      "Notification2": {
+        "title": "Notification2",
+        "required": [
+          "id",
+          "params"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "params": {
+            "type": "object"
+          }
+        },
+        "example": {
+          "id": 107,
+          "params": {}
+        }
+      },
+      "Params3": {
+        "title": "Params3",
+        "required": [
+          "lang",
+          "alertTitle",
+          "symbol",
+          "currency",
+          "value",
+          "alertText",
+          "instrument_currency",
+          "signAfterValue",
+          "alertColor",
+          "emailAddress",
+          "subject",
+          "alertDirection",
+          "currTime"
+        ],
+        "type": "object",
+        "properties": {
+          "lang": {
+            "type": "string"
+          },
+          "alertTitle": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "alertText": {
+            "type": "string"
+          },
+          "instrument_currency": {
+            "type": "string"
+          },
+          "signAfterValue": {
+            "type": "string"
+          },
+          "alertColor": {
+            "type": "string"
+          },
+          "emailAddress": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "alertDirection": {
+            "type": "string"
+          },
+          "currTime": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "lang": "en",
+          "alertTitle": "Price is above",
+          "symbol": "GOLD",
+          "currency": "$",
+          "value": 135,
+          "alertText": "rises above",
+          "instrument_currency": "$",
+          "signAfterValue": "",
+          "alertColor": "#2FB142",
+          "emailAddress": "{{email.safecap}}",
+          "subject": "Price alert: Gold (35$)",
+          "alertDirection": "",
+          "currTime": "2017-06-06 12:00:00"
+        }
+      },
+      "In-platform:109-PriceAlertRequest": {
+        "title": "In-platform:109-PriceAlertRequest",
+        "required": [
+          "customers"
+        ],
+        "type": "object",
+        "properties": {
+          "customers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Customer3"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "customers": [
+            {
+              "id": "{{push.client.cid}}",
+              "notifications": [
+                {
+                  "id": 109
+                }
+              ],
+              "params": {
+                "lang": "en",
+                "alertTitle": "Price is above",
+                "symbol": "GOLD",
+                "currency": "$",
+                "value": 135,
+                "instrument_currency": "$",
+                "signAfterValue": ""
+              }
+            }
+          ]
+        }
+      },
+      "Customer3": {
+        "title": "Customer3",
+        "required": [
+          "id",
+          "notifications",
+          "params"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "notifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Notification"
+            },
+            "description": ""
+          },
+          "params": {
+            "$ref": "#/components/schemas/Params4"
+          }
+        },
+        "example": {
+          "id": "{{push.client.cid}}",
+          "notifications": [
+            {
+              "id": 109
+            }
+          ],
+          "params": {
+            "lang": "en",
+            "alertTitle": "Price is above",
+            "symbol": "GOLD",
+            "currency": "$",
+            "value": 135,
+            "instrument_currency": "$",
+            "signAfterValue": ""
+          }
+        }
+      },
+      "Params4": {
+        "title": "Params4",
+        "required": [
+          "lang",
+          "alertTitle",
+          "symbol",
+          "currency",
+          "value",
+          "instrument_currency",
+          "signAfterValue"
+        ],
+        "type": "object",
+        "properties": {
+          "lang": {
+            "type": "string"
+          },
+          "alertTitle": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "instrument_currency": {
+            "type": "string"
+          },
+          "signAfterValue": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "lang": "en",
+          "alertTitle": "Price is above",
+          "symbol": "GOLD",
+          "currency": "$",
+          "value": 135,
+          "instrument_currency": "$",
+          "signAfterValue": ""
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
