@@ -112,20 +112,21 @@
                 "json": {
                   "summary": "json",
                   "value": {
-                      "email": "nastya2211@test.ua",
-                      "password" : "123",
-                      "currencyCode": "USD",
-                      "accountType": "REAL",
-                      "brandPrefix": "mk",
-                      "activeStatus": "1",
-                      "company": "strongbow",
-                      "fullName": "nastya",
-                      "isIslamic": "0",
-                      "isPaperMoney": "0",
-                      "isOmnibus": "0",
-                      "country" : "ua"
+                    "email": "nastya2211@test.ua",
+                    "password": "123",
+                    "currencyCode": "USD",
+                    "accountType": "REAL",
+                    "brandPrefix": "mk",
+                    "activeStatus": "1",
+                    "company": "strongbow",
+                    "fullName": "nastya",
+                    "isIslamic": "0",
+                    "isPaperMoney": "0",
+                    "isOmnibus": "0",
+                    "country": "ua"
                   }
                 }
+              }
           },
           "required": false,
           "x-send-file-in-body": false
