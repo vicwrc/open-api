@@ -620,7 +620,28 @@
         "responses": {
           "200": {
             "description": "",
-            "headers": {}
+            "headers": {},
+            "content": {
+              "application/json": {
+                "example": {
+                  "causeLiquidation": false,
+                  "expectedMarginLevel": 6204192.39,
+                  "accountMetrics": {
+                    "cashBalance": 8816656.74,
+                    "margin": 145.92795769312,
+                    "equity": 9053651.24,
+                    "openPL": 236994.50141866,
+                    "riskLevel": 1.611813331713007E-5,
+                    "reverseRiskLevel": 62041.92385834266,
+                    "availableBalanceForWithdrawal": 8816656.74,
+                    "activeBonuses": 0.0,
+                    "liquidationLevel": 50.0,
+                    "marginLimitType": "REVERSE",
+                    "marginCoefficient": 1.0
+                  }
+                }
+              }
+            }
           }
         },
         "deprecated": false,
@@ -643,7 +664,24 @@
         "responses": {
           "200": {
             "description": "",
-            "headers": {}
+            "headers": {},
+            "content": {
+              "application/json": {
+                "example": {
+                  "cashBalance": 8816656.74,
+                  "margin": 146.61611850912,
+                  "equity": 9057189.72,
+                  "openPL": 240532.97591036,
+                  "riskLevel": 1.6187815762030876E-5,
+                  "reverseRiskLevel": 61774.85676267315,
+                  "availableBalanceForWithdrawal": 8816656.74,
+                  "activeBonuses": 0.0,
+                  "liquidationLevel": null,
+                  "marginLimitType": null,
+                  "marginCoefficient": 1.0
+                }
+              }
+            }
           }
         },
         "deprecated": false
