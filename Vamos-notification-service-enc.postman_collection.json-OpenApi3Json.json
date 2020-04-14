@@ -31,179 +31,106 @@
               "schema": {
                 "$ref": "#/components/schemas/PushNotification%3A111-GeneralpushRequest"
               },
-              "example": {
-                "customers": [
-                  {
-                    "id": "{{push.client.cid}}",
-                    "notifications": [
+              "examples": {
+                "Push Notification: 111 - General push": {
+                  "summary": "Push Notification: 111 - General push",
+                  "value": {
+                    "customers": [
                       {
-                        "id": 111
-                      }
-                    ],
-                    "params": {
-                      "subject": "test",
-                      "content": "it is time to trade!",
-                      "url": "cosmos://trade?platform=LIVE&symbol=EUR/USD&side=buy&quantity=1000&type=market"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "required": true,
-          "x-send-file-in-body": false
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "headers": {}
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/notification": {
-      "post": {
-        "tags": [
-          "Misc"
-        ],
-        "summary": "Push Notification: 100 - Margin call",
-        "operationId": "PushNotification:100-Margincall",
-        "parameters": [],
-        "requestBody": {
-          "description": "",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PushNotification%3A100-MargincallRequest"
-              },
-              "example": {
-                "customers": [
-                  {
-                    "id": "{{push.client.cid}}",
-                    "notifications": [
-                      {
-                        "id": 100,
+                        "id": "{{push.client.cid}}",
+                        "notifications": [
+                          {
+                            "id": 111
+                          }
+                        ],
                         "params": {
-                          "marginStep": 70
+                          "subject": "test",
+                          "content": "it is time to trade!",
+                          "url": "cosmos://trade?platform=LIVE&symbol=EUR/USD&side=buy&quantity=1000&type=market"
                         }
                       }
-                    ],
-                    "params": {
-                      "customerId": "{{push.client.cid}}",
-                      "lang": "en",
-                      "tpid": "{{push.client.tpid}}",
-                      "test": false
-                    }
+                    ]
                   }
-                ]
-              }
-            }
-          },
-          "required": true,
-          "x-send-file-in-body": false
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "headers": {}
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/notification": {
-      "post": {
-        "tags": [
-          "Misc"
-        ],
-        "summary": "Push Notification: 107 - Price Alert",
-        "operationId": "PushNotification:107-PriceAlert",
-        "parameters": [],
-        "requestBody": {
-          "description": "",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PushNotification%3A107-PriceAlertRequest"
-              },
-              "example": {
-                "customers": [
-                  {
-                    "id": "{{push.client.cid}}",
-                    "notifications": [
+                },
+                "Push Notification: 100 - Margin call" :{
+                  "summary": "Push Notification: 100 - Margin call",
+                  "value": {
+                    "customers": [
                       {
-                        "id": 107,
-                        "params": {}
+                        "id": "{{push.client.cid}}",
+                        "notifications": [
+                          {
+                            "id": 100,
+                            "params": {
+                              "marginStep": 70
+                            }
+                          }
+                        ],
+                        "params": {
+                          "customerId": "{{push.client.cid}}",
+                          "lang": "en",
+                          "tpid": "{{push.client.tpid}}",
+                          "test": false
+                        }
                       }
-                    ],
-                    "params": {
-                      "lang": "en",
-                      "alertTitle": "Price is above",
-                      "symbol": "GOLD",
-                      "currency": "$",
-                      "value": 135,
-                      "alertText": "rises above",
-                      "instrument_currency": "$",
-                      "signAfterValue": "",
-                      "alertColor": "#2FB142",
-                      "emailAddress": "{{email.safecap}}",
-                      "subject": "Price alert: Gold (35$)",
-                      "alertDirection": "",
-                      "currTime": "2017-06-06 12:00:00"
-                    }
+                    ]
                   }
-                ]
-              }
-            }
-          },
-          "required": true,
-          "x-send-file-in-body": false
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "headers": {}
-          }
-        },
-        "deprecated": false
-      }
-    },
-    "/notification": {
-      "post": {
-        "tags": [
-          "Misc"
-        ],
-        "summary": "In-platform: 109 - Price Alert",
-        "operationId": "In-platform:109-PriceAlert",
-        "parameters": [],
-        "requestBody": {
-          "description": "",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/In-platform%3A109-PriceAlertRequest"
-              },
-              "example": {
-                "customers": [
-                  {
-                    "id": "{{push.client.cid}}",
-                    "notifications": [
+                },
+                "Push Notification: 107 - Price Alert" : {
+                  "summary": "Push Notification: 107 - Price Alert",
+                  "value": {
+                    "customers": [
                       {
-                        "id": 109
+                        "id": "{{push.client.cid}}",
+                        "notifications": [
+                          {
+                            "id": 107,
+                            "params": {}
+                          }
+                        ],
+                        "params": {
+                          "lang": "en",
+                          "alertTitle": "Price is above",
+                          "symbol": "GOLD",
+                          "currency": "$",
+                          "value": 135,
+                          "alertText": "rises above",
+                          "instrument_currency": "$",
+                          "signAfterValue": "",
+                          "alertColor": "#2FB142",
+                          "emailAddress": "{{email.safecap}}",
+                          "subject": "Price alert: Gold (35$)",
+                          "alertDirection": "",
+                          "currTime": "2017-06-06 12:00:00"
+                        }
                       }
-                    ],
-                    "params": {
-                      "lang": "en",
-                      "alertTitle": "Price is above",
-                      "symbol": "GOLD",
-                      "currency": "$",
-                      "value": 135,
-                      "instrument_currency": "$",
-                      "signAfterValue": ""
-                    }
+                    ]
                   }
-                ]
+                },
+                "In-platform: 109 - Price Alert" : {
+                  "summary": "In-platform: 109 - Price Alert",
+                  "value": {
+                    "customers": [
+                      {
+                        "id": "{{push.client.cid}}",
+                        "notifications": [
+                          {
+                            "id": 109
+                          }
+                        ],
+                        "params": {
+                          "lang": "en",
+                          "alertTitle": "Price is above",
+                          "symbol": "GOLD",
+                          "currency": "$",
+                          "value": 135,
+                          "instrument_currency": "$",
+                          "signAfterValue": ""
+                        }
+                      }
+                    ]
+                  }
+                }
               }
             }
           },
