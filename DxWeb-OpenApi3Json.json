@@ -359,8 +359,20 @@
                     "description": "This profiles will be activated"
                   }
                 }
+              },
+              "examples": {
+                "JSON": {
+                  "summary": "JSON",
+                  "value": {
+                    "allProfilesSet":"11342606:1,9276576: 2,36898725:1",
+                    "activateProfilesSet":"11342606:1,9276576: 2"
+                  }
+                },
+                "CURL": {
+                  "summary": "CURL",
+                  "value": "curl --location --request PUT '{{domain}}/dxweb/rest/customers/mk1104165/activateProfiles' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--header 'Authorization: Basic cm9vdEBzeXN0ZW06cm9vdA==' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'allProfilesSet=11342606:1,9276576: 2,36898725:1' \\\n--data-urlencode 'activateProfilesSet=11342606:1,9276576: 2'"
+                }
               }
-
             }
           },
           "required": false,
@@ -419,6 +431,19 @@
                     "type": "string"
                   }
                 }
+              },
+              "examples": {
+                "JSON": {
+                  "summary": "JSON",
+                  "value": {
+                    "profileRemove":"11342606:1",
+                    "profileAdd":""
+                  }
+                },
+                "CURL": {
+                  "summary": "CURL",
+                  "value": "curl --location --request PUT '{{domain}}/dxweb/rest/customers/mk1104165/exchangeProfiles' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--header 'Authorization: Basic cm9vdEBzeXN0ZW06cm9vdA==' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'profileRemove=11342606:1' \\\n--data-urlencode 'profileAdd='"
+                }
               }
             }
           },
@@ -471,13 +496,46 @@
             "schema": {
               "type": "string",
               "example": "CRM"
+            },
+            "examples" : {
+              "JSON" : {
+                "summary" : "JSON",
+                "value" : {
+                  "amount":123.23,
+                  "requestSource": "CRM"
+                }
+              },
+              "CURL" : {
+                "summary" : "CURL",
+                "value" : "curl --location --request GET '{{domain}}/dxweb/rest/accounts/mk1104165/validate/withdrawal?amount=238.9&requestSource=CRM' \\\n--header 'Authorization: Basic cm9vdEBzeXN0ZW06cm9vdA=='"
+              }
             }
           }
         ],
         "responses": {
           "200": {
             "description": "",
-            "headers": {}
+            "headers": {},
+            "content": {
+              "application/json": {
+                "example": {
+                  "valid": true,
+                  "accountMetrics": {
+                    "cashBalance": 8816656.74,
+                    "margin": 146.020683399016,
+                    "equity": 9053802.85,
+                    "openPL": 237146.10418902,
+                    "riskLevel": 1.6128105042514375E-5,
+                    "reverseRiskLevel": 62003.56442148394,
+                    "availableBalanceForWithdrawal": 8816656.74,
+                    "activeBonuses": 0.0,
+                    "liquidationLevel": null,
+                    "marginLimitType": null,
+                    "marginCoefficient": 1.0
+                  }
+                }
+              }
+            }
           }
         },
         "deprecated": false,
