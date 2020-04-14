@@ -1,0 +1,567 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "dxWeb",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://standalone.az-qa.com:81/dxweb/rest",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/customers": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "createCustomer",
+        "operationId": "createCustomer",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "application/x-www-form-urlencoded"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "email",
+                  "password",
+                  "currencyCode",
+                  "accountType",
+                  "brandPrefix",
+                  "activeStatus",
+                  "company",
+                  "fullName",
+                  "isIslamic",
+                  "isPaperMoney",
+                  "isOmnibus",
+                  "country"
+                ],
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "nastya2211@test.ua"
+                  },
+                  "password": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 123
+                  },
+                  "currencyCode": {
+                    "type": "string",
+                    "example": "USD"
+                  },
+                  "accountType": {
+                    "type": "string",
+                    "example": "REAL"
+                  },
+                  "brandPrefix": {
+                    "type": "string",
+                    "example": "si"
+                  },
+                  "activeStatus": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 1
+                  },
+                  "company": {
+                    "type": "string",
+                    "example": "strongbow"
+                  },
+                  "fullName": {
+                    "type": "string",
+                    "example": "nastya"
+                  },
+                  "isIslamic": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 0
+                  },
+                  "isPaperMoney": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 0
+                  },
+                  "isOmnibus": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 0
+                  },
+                  "country": {
+                    "type": "string",
+                    "example": "ua"
+                  }
+                }
+              }
+            }
+          },
+          "required": false,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/customers/si10016300": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "updateAccount",
+        "operationId": "updateAccount",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "application/x-www-form-urlencoded"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "newFullName",
+                  "country",
+                  "activeStatus"
+                ],
+                "type": "object",
+                "properties": {
+                  "newFullName": {
+                    "type": "string",
+                    "example": "Nastya"
+                  },
+                  "country": {
+                    "type": "string",
+                    "example": "fr"
+                  },
+                  "activeStatus": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 0
+                  }
+                }
+              }
+            }
+          },
+          "required": false,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/customers/si10016300/transfers": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "changeAccountBalance",
+        "operationId": "changeAccountBalance",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "application/x-www-form-urlencoded"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "amount",
+                  "transferType",
+                  "transferCode",
+                  "comment",
+                  "requestSource"
+                ],
+                "type": "object",
+                "properties": {
+                  "amount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "example": 100
+                  },
+                  "transferType": {
+                    "type": "string",
+                    "example": "DEPOSIT"
+                  },
+                  "transferCode": {
+                    "type": "string",
+                    "example": "AAABZzsI9ywwwRbkK_L"
+                  },
+                  "comment": {
+                    "type": "string",
+                    "example": "Comments"
+                  },
+                  "requestSource": {
+                    "type": "string",
+                    "example": "CRM"
+                  }
+                }
+              }
+            }
+          },
+          "required": false,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/customers/si10016300/activateProfiles": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "activateProfiles",
+        "operationId": "activateProfiles",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "application/x-www-form-urlencoded"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "allProfilesSet",
+                  "activateProfilesSet"
+                ],
+                "type": "object",
+                "properties": {
+                  "allProfilesSet": {
+                    "type": "string",
+                    "description": "This profiles will be removed",
+                    "example": "9276996:3"
+                  },
+                  "activateProfilesSet": {
+                    "type": "string",
+                    "description": "This profiles will be activated"
+                  }
+                }
+              }
+            }
+          },
+          "required": false,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/customers/si10016300/exchangeProfiles": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "exchangeProfiles",
+        "operationId": "exchangeProfiles",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "application/x-www-form-urlencoded"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "profileAdd",
+                  "profileRemove"
+                ],
+                "type": "object",
+                "properties": {
+                  "profileAdd": {
+                    "type": "string"
+                  },
+                  "profileRemove": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "required": false,
+          "x-send-file-in-body": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/withdrawal": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "validate/withdrawal",
+        "operationId": "validate/withdrawal",
+        "parameters": [
+          {
+            "name": "amount",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "example": 238.9
+            }
+          },
+          {
+            "name": "requestSource",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "CRM"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest/accounts/mk1116mm248/validate",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/generateToken": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "generateToken",
+        "operationId": "generateToken",
+        "parameters": [
+          {
+            "name": "login",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "root"
+            }
+          },
+          {
+            "name": "domain",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "system"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/accounts/mk1116248/validate/adjustment/negative": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/validate/adjustment",
+        "operationId": "/validate/adjustment",
+        "parameters": [
+          {
+            "name": "amount",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 400
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://standalone.az-qa.com:81/dxweb/rest",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "accouns metrics",
+        "operationId": "accounsmetrics",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "httpBasic": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "security": [
+    {
+      "httpBasic": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
