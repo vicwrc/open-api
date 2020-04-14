@@ -127,6 +127,7 @@
                   }
                 }
               }
+            }
           },
           "required": false,
           "x-send-file-in-body": false
