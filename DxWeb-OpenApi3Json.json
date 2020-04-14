@@ -109,8 +109,8 @@
                 }
               },
               "examples": {
-                "json": {
-                  "summary": "json",
+                "JSON": {
+                  "summary": "JSON",
                   "value": {
                     "email": "nastya2211@test.ua",
                     "password": "123",
@@ -191,6 +191,16 @@
                     "type": "integer",
                     "format": "int32",
                     "example": 0
+                  }
+                }
+              },
+              "examples": {
+                "JSON": {
+                  "summary": "JSON",
+                  "value": {
+                    "activeStatus": "0",
+                    "fullName": "Nastya",
+                    "country": "fr"
                   }
                 }
               }
