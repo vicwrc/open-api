@@ -1,0 +1,858 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "notification-storege-app-standalone",
+    "description": "",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://192.168.4.245:4001/notifications/list/DEALING_MESSAGE",
+      "variables": {}
+    },
+    {
+      "url": "192.168.4.245:4001/notifications",
+      "variables": {}
+    },
+    {
+      "url": "https://192.168.4.245:4001/notifications",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/mk10016333": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/list/DEALING_MESSAGE/{customerId}",
+        "description": "",
+        "operationId": "/notifications/list/DEALING_MESSAGE/{customerId}",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "http://192.168.4.245:4001/notifications/list/DEALING_MESSAGE",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/count/DEALING_MESSAGE/mk10016333": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/count/{{DEALING_MESSAGE}}/{{customerId}}",
+        "description": "",
+        "operationId": "/notifications/count/{{DEALING_MESSAGE}}/{{customerId}}",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/update/read/DEALING_MESSAGE": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/update/read/{DEALING_MESSAGE}",
+        "description": "",
+        "operationId": "/notifications/update/read/{DEALING_MESSAGE}",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "[{\"key\":\"Content-Type\",\"value\":\"application/json\",\"equals\":true,\"description\":null,\"enabled\":false}]": {
+              "schema": {
+                "$ref": "#/components/schemas/~1notifications~1update~1read~1%7BDEALING_MESSAGE%7D_Request"
+              },
+              "example": {
+                "messageIds": [
+                  "af7f85ce-70bd-4f1a-93f7-a60c5d0c6894"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/update/unread/DEALING_MESSAGE": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/update/unread/{DEALING_MESSAGE}",
+        "description": "",
+        "operationId": "/notifications/update/unread/{DEALING_MESSAGE}",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1notifications~1update~1unread~1%7BDEALING_MESSAGE%7D_Request"
+              },
+              "example": {
+                "messageIds": [
+                  "af7f85ce-70bd-4f1a-93f7-a60c5d0c6894"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/update/remove/DEALING_MESSAGE": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/update/remove/{DEALING_MESSAGE}",
+        "description": "",
+        "operationId": "/notifications/update/remove/{DEALING_MESSAGE}",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1notifications~1update~1remove~1%7BDEALING_MESSAGE%7D_Request"
+              },
+              "example": {
+                "messageIds": [
+                  "e1880be9-1bd9-4d3f-9006-c7f151f5f929"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/list/NOTIFICATION_CENTER/21599653": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/list/{NOTIFICATION_CENTER_MESSAGE}/21599653",
+        "description": "",
+        "operationId": "/notifications/list/{NOTIFICATION_CENTER_MESSAGE}/21599653",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "https://192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/list/NOTIFICATION_CENTER/mk10016333": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/list/{NOTIFICATION_CENTER_MESSAGE}/215996531",
+        "description": "",
+        "operationId": "/notifications/list/{NOTIFICATION_CENTER_MESSAGE}/215996531",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/count/NOTIFICATION_CENTER/mk10016333": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/count/{NOTIFICATION_CENTER_MESSAGE_TYPE}/21599653",
+        "description": "",
+        "operationId": "/notifications/count/{NOTIFICATION_CENTER_MESSAGE_TYPE}/21599653",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/update/read/NOTIFICATION_CENTER": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/update/read/{NOTIFICATION_CENTER_MESSAGE_TYPE}",
+        "description": "",
+        "operationId": "/notifications/update/read/{NOTIFICATION_CENTER_MESSAGE_TYPE}",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1notifications~1update~1read~1%7BNOTIFICATION_CENTER_MESSAGE_TYPE%7D_Request"
+              },
+              "example": {
+                "messageIds": [
+                  "2975f994-3a8a-4cfe-a2d4-f27c42c96650"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "https://192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/update/unread/NOTIFICATION_CENTER": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/update/unread/{NOTIFICATION_CENTER_MESSAGE_TYPE}",
+        "description": "",
+        "operationId": "/notifications/update/unread/{NOTIFICATION_CENTER_MESSAGE_TYPE}",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1notifications~1update~1unread~1%7BNOTIFICATION_CENTER_MESSAGE_TYPE%7D_Request"
+              },
+              "example": {
+                "messageIds": [
+                  "0031aa38-e10a-4fe9-b787-adc38a3f6200"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/update/remove/NOTIFICATION_CENTER": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/update/remove/{NOTIFICATION_CENTER_MESSAGE}",
+        "description": "",
+        "operationId": "/notifications/update/remove/{NOTIFICATION_CENTER_MESSAGE}",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1notifications~1update~1remove~1%7BNOTIFICATION_CENTER_MESSAGE%7D_Request"
+              },
+              "example": {
+                "messageIds": [
+                  "2975f994-3a8a-4cfe-a2d4-f27c42c96650"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "https://192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/create/INFORM_MESSAGE": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/notifications/create/INFORM_MESSAGE",
+        "description": "",
+        "operationId": "/notifications/create/INFORM_MESSAGE",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1notifications~1create~1INFORM_MESSAGE_Request"
+              },
+              "example": {
+                "campaignName": "NC_Campaign (Clone)",
+                "englishAsDefault": true,
+                "texts": {
+                  "en": {
+                    "title": "Title-en",
+                    "body": "Body-en",
+                    "buttonText": "Button text-en"
+                  },
+                  "fr": {
+                    "title": "Title-fr",
+                    "body": "Body-fr",
+                    "buttonText": "Button_text-fr"
+                  }
+                },
+                "image": [
+                  {
+                    "_id": "5ebe52b620caf91ee7f3e4b7",
+                    "imageTitle": "Image 1",
+                    "imageUrl": "https://s3.eu-west-1.amazonaws.com/content-qa.extsrv.com/inform/1589531267267.jpg",
+                    "originalFileName": "placeimg_640_480_tech1589531256693.jpg"
+                  },
+                  {
+                    "_id": "5ece5603c397110b663d0ea0",
+                    "imageTitle": "Image 2",
+                    "imageUrl": "https://vamos-qa-platform-messaging.s3.eu-west-1.amazonaws.com/pictures/1590580691169.jpg",
+                    "originalFileName": "1008_0167mol_7690_6hi1590580693109.jpg"
+                  }
+                ],
+                "action": {
+                  "id": "openTradingTool",
+                  "instrument": null,
+                  "url": "ui:price-alerts"
+                },
+                "tags": [
+                  "Alert",
+                  "New Feature"
+                ],
+                "customerIds": [
+                  "mk10016333"
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.245:4001/notifications",
+            "variables": {}
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Content-Type": {
+        "title": "Content-Type",
+        "required": [
+          "key",
+          "value",
+          "equals",
+          "description",
+          "enabled"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "equals": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean"
+          }
+        },
+        "example": {
+          "key": "Content-Type",
+          "value": "application/json",
+          "equals": true,
+          "description": null,
+          "enabled": false
+        }
+      },
+      "/notifications/update/read/{DEALING_MESSAGE}_Request": {
+        "title": "/notifications/update/read/{DEALING_MESSAGE}_Request",
+        "required": [
+          "messageIds"
+        ],
+        "type": "object",
+        "properties": {
+          "messageIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "messageIds": [
+            "af7f85ce-70bd-4f1a-93f7-a60c5d0c6894"
+          ]
+        }
+      },
+      "/notifications/update/unread/{DEALING_MESSAGE}_Request": {
+        "title": "/notifications/update/unread/{DEALING_MESSAGE}_Request",
+        "required": [
+          "messageIds"
+        ],
+        "type": "object",
+        "properties": {
+          "messageIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "messageIds": [
+            "af7f85ce-70bd-4f1a-93f7-a60c5d0c6894"
+          ]
+        }
+      },
+      "/notifications/update/remove/{DEALING_MESSAGE}_Request": {
+        "title": "/notifications/update/remove/{DEALING_MESSAGE}_Request",
+        "required": [
+          "messageIds"
+        ],
+        "type": "object",
+        "properties": {
+          "messageIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "messageIds": [
+            "e1880be9-1bd9-4d3f-9006-c7f151f5f929"
+          ]
+        }
+      },
+      "/notifications/update/read/{NOTIFICATION_CENTER_MESSAGE_TYPE}_Request": {
+        "title": "/notifications/update/read/{NOTIFICATION_CENTER_MESSAGE_TYPE}_Request",
+        "required": [
+          "messageIds"
+        ],
+        "type": "object",
+        "properties": {
+          "messageIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "messageIds": [
+            "2975f994-3a8a-4cfe-a2d4-f27c42c96650"
+          ]
+        }
+      },
+      "/notifications/update/unread/{NOTIFICATION_CENTER_MESSAGE_TYPE}_Request": {
+        "title": "/notifications/update/unread/{NOTIFICATION_CENTER_MESSAGE_TYPE}_Request",
+        "required": [
+          "messageIds"
+        ],
+        "type": "object",
+        "properties": {
+          "messageIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "messageIds": [
+            "0031aa38-e10a-4fe9-b787-adc38a3f6200"
+          ]
+        }
+      },
+      "/notifications/update/remove/{NOTIFICATION_CENTER_MESSAGE}_Request": {
+        "title": "/notifications/update/remove/{NOTIFICATION_CENTER_MESSAGE}_Request",
+        "required": [
+          "messageIds"
+        ],
+        "type": "object",
+        "properties": {
+          "messageIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "messageIds": [
+            "2975f994-3a8a-4cfe-a2d4-f27c42c96650"
+          ]
+        }
+      },
+      "/notifications/create/INFORM_MESSAGE_Request": {
+        "title": "/notifications/create/INFORM_MESSAGE_Request",
+        "required": [
+          "campaignName",
+          "englishAsDefault",
+          "texts",
+          "image",
+          "action",
+          "tags",
+          "customerIds"
+        ],
+        "type": "object",
+        "properties": {
+          "campaignName": {
+            "type": "string"
+          },
+          "englishAsDefault": {
+            "type": "boolean"
+          },
+          "texts": {
+            "$ref": "#/components/schemas/Texts"
+          },
+          "image": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Image"
+            },
+            "description": ""
+          },
+          "action": {
+            "$ref": "#/components/schemas/Action"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          },
+          "customerIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": ""
+          }
+        },
+        "example": {
+          "campaignName": "NC_Campaign (Clone)",
+          "englishAsDefault": true,
+          "texts": {
+            "en": {
+              "title": "Title-en",
+              "body": "Body-en",
+              "buttonText": "Button text-en"
+            },
+            "fr": {
+              "title": "Title-fr",
+              "body": "Body-fr",
+              "buttonText": "Button_text-fr"
+            }
+          },
+          "image": [
+            {
+              "_id": "5ebe52b620caf91ee7f3e4b7",
+              "imageTitle": "Image 1",
+              "imageUrl": "https://s3.eu-west-1.amazonaws.com/content-qa.extsrv.com/inform/1589531267267.jpg",
+              "originalFileName": "placeimg_640_480_tech1589531256693.jpg"
+            },
+            {
+              "_id": "5ece5603c397110b663d0ea0",
+              "imageTitle": "Image 2",
+              "imageUrl": "https://vamos-qa-platform-messaging.s3.eu-west-1.amazonaws.com/pictures/1590580691169.jpg",
+              "originalFileName": "1008_0167mol_7690_6hi1590580693109.jpg"
+            }
+          ],
+          "action": {
+            "id": "openTradingTool",
+            "instrument": null,
+            "url": "ui:price-alerts"
+          },
+          "tags": [
+            "Alert",
+            "New Feature"
+          ],
+          "customerIds": [
+            "mk10016333"
+          ]
+        }
+      },
+      "Texts": {
+        "title": "Texts",
+        "required": [
+          "en",
+          "fr"
+        ],
+        "type": "object",
+        "properties": {
+          "en": {
+            "$ref": "#/components/schemas/En"
+          },
+          "fr": {
+            "$ref": "#/components/schemas/Fr"
+          }
+        },
+        "example": {
+          "en": {
+            "title": "Title-en",
+            "body": "Body-en",
+            "buttonText": "Button text-en"
+          },
+          "fr": {
+            "title": "Title-fr",
+            "body": "Body-fr",
+            "buttonText": "Button_text-fr"
+          }
+        }
+      },
+      "En": {
+        "title": "En",
+        "required": [
+          "title",
+          "body",
+          "buttonText"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "buttonText": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "title": "Title-en",
+          "body": "Body-en",
+          "buttonText": "Button text-en"
+        }
+      },
+      "Fr": {
+        "title": "Fr",
+        "required": [
+          "title",
+          "body",
+          "buttonText"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "buttonText": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "title": "Title-fr",
+          "body": "Body-fr",
+          "buttonText": "Button_text-fr"
+        }
+      },
+      "Image": {
+        "title": "Image",
+        "required": [
+          "_id",
+          "imageTitle",
+          "imageUrl",
+          "originalFileName"
+        ],
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "imageTitle": {
+            "type": "string"
+          },
+          "imageUrl": {
+            "type": "string"
+          },
+          "originalFileName": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "_id": "5ebe52b620caf91ee7f3e4b7",
+          "imageTitle": "Image 1",
+          "imageUrl": "https://s3.eu-west-1.amazonaws.com/content-qa.extsrv.com/inform/1589531267267.jpg",
+          "originalFileName": "placeimg_640_480_tech1589531256693.jpg"
+        }
+      },
+      "Action": {
+        "title": "Action",
+        "required": [
+          "id",
+          "instrument",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "instrument": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "id": "openTradingTool",
+          "instrument": null,
+          "url": "ui:price-alerts"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,890 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "internal-campaigns",
+    "description": "",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "192.168.4.127:8183/icampaigns/api",
+      "variables": {}
+    },
+    {
+      "url": "https://192.168.4.127:8183/icampaigns/api/campaigns",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/campaigns": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaigns",
+        "description": "",
+        "operationId": "/icampaigns/api/campaigns",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.127:8183/icampaigns/api",
+            "variables": {}
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaignsIMGE",
+        "description": "",
+        "operationId": "/icampaigns/api/campaignsIMGE",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1icampaigns~1api~1campaignsIMGERequest"
+              },
+              "example": {
+                "enabled": true,
+                "campaignDataParams": [
+                  {
+                    "device": "INDIGO_WEB",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "ANDROID_TABLET",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "WEB",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "INDIGO_MOBILE",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "ANDROID_MOBILE",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "IOS_TABLET",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "IOS_MOBILE",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  }
+                ],
+                "type": "ALL",
+                "action": {
+                  "type": "EXTERNAL",
+                  "url": "https://google.com/"
+                },
+                "opacity": 50.0,
+                "duration": 30000,
+                "displayCount": 2,
+                "displayInterval": 1000,
+                "delayedDisplay": 0,
+                "width": 0,
+                "height": 0,
+                "marginHeight": 0,
+                "closeButtonDelay": 0,
+                "closeButton": true,
+                "firstLogin": false,
+                "campaignName": "test",
+                "campaignExpiredDate": 1587970546197,
+                "campaignStartDate": 1587970546200,
+                "priority": 4,
+                "campaignContentType": "IMAGE"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.127:8183/icampaigns/api",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/campaigns/424": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaigns/{id}",
+        "description": "",
+        "operationId": "/icampaigns/api/campaigns/{id}",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.127:8183/icampaigns/api",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaigns/{campaign_id_imeg}",
+        "description": "",
+        "operationId": "/icampaigns/api/campaigns/{campaign_id_imeg}",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/~1icampaigns~1api~1campaignsIMGERequest"
+              },
+              "example": {
+                "enabled": true,
+                "campaignDataParams": [
+                  {
+                    "device": "INDIGO_WEB",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "ANDROID_TABLET",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "WEB",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "INDIGO_MOBILE",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "ANDROID_MOBILE",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "IOS_TABLET",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  },
+                  {
+                    "device": "IOS_MOBILE",
+                    "lang": "en",
+                    "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+                    "version": null,
+                    "bannerText": null
+                  }
+                ],
+                "type": "ALL",
+                "action": {
+                  "type": "EXTERNAL",
+                  "url": "https://google.com/"
+                },
+                "opacity": 50.0,
+                "duration": 30000,
+                "displayCount": 3,
+                "displayInterval": 1000,
+                "delayedDisplay": 0,
+                "width": 0,
+                "height": 0,
+                "marginHeight": 0,
+                "closeButtonDelay": 0,
+                "closeButton": true,
+                "firstLogin": false,
+                "campaignName": "test",
+                "campaignExpiredDate": 1587970546197,
+                "campaignStartDate": 1587970546200,
+                "priority": 4,
+                "campaignContentType": "IMAGE"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "https://192.168.4.127:8183/icampaigns/api/campaigns",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/campaigns/": {
+      "delete": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaigns/{id_campaign_image}",
+        "description": "",
+        "operationId": "/icampaigns/api/campaigns/{id_campaign_image}",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.127:8183/icampaigns/api",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/campaigns/424/customers": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaigns/{capaingId}/customers (check that user is added)",
+        "description": "",
+        "operationId": "/icampaigns/api/campaigns/{capaingId}/customers(checkthatuserisadded)",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.127:8183/icampaigns/api",
+            "variables": {}
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaigns/{capaingId}/customers (put customer)",
+        "description": "",
+        "operationId": "/icampaigns/api/campaigns/{capaingId}/customers(putcustomer)",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": ""
+              },
+              "example": [
+                "si10016311"
+              ]
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.127:8183/icampaigns/api",
+            "variables": {}
+          }
+        ]
+      }
+    },
+    "/campaigns/424/delete/customers": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "/icampaigns/api/campaigns/{capaingId}/delete/customers ( delete user)",
+        "description": "",
+        "operationId": "/icampaigns/api/campaigns/{capaingId}/delete/customers(deleteuser)",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": ""
+              },
+              "example": [
+                "21606775"
+              ]
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "servers": [
+          {
+            "url": "192.168.4.127:8183/icampaigns/api",
+            "variables": {}
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "/icampaigns/api/campaignsIMGERequest": {
+        "title": "/icampaigns/api/campaignsIMGERequest",
+        "required": [
+          "enabled",
+          "campaignDataParams",
+          "type",
+          "action",
+          "opacity",
+          "duration",
+          "displayCount",
+          "displayInterval",
+          "delayedDisplay",
+          "width",
+          "height",
+          "marginHeight",
+          "closeButtonDelay",
+          "closeButton",
+          "firstLogin",
+          "campaignName",
+          "campaignExpiredDate",
+          "campaignStartDate",
+          "priority",
+          "campaignContentType"
+        ],
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "campaignDataParams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CampaignDataParam"
+            },
+            "description": ""
+          },
+          "type": {
+            "type": "string"
+          },
+          "action": {
+            "$ref": "#/components/schemas/Action"
+          },
+          "opacity": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "displayCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "displayInterval": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "delayedDisplay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "width": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "height": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marginHeight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "closeButtonDelay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "closeButton": {
+            "type": "boolean"
+          },
+          "firstLogin": {
+            "type": "boolean"
+          },
+          "campaignName": {
+            "type": "string"
+          },
+          "campaignExpiredDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "campaignStartDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "campaignContentType": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "enabled": true,
+          "campaignDataParams": [
+            {
+              "device": "INDIGO_WEB",
+              "lang": "en",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+              "version": null,
+              "bannerText": null
+            },
+            {
+              "device": "ANDROID_TABLET",
+              "lang": "en",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+              "version": null,
+              "bannerText": null
+            },
+            {
+              "device": "WEB",
+              "lang": "en",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+              "version": null,
+              "bannerText": null
+            },
+            {
+              "device": "INDIGO_MOBILE",
+              "lang": "en",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+              "version": null,
+              "bannerText": null
+            },
+            {
+              "device": "ANDROID_MOBILE",
+              "lang": "en",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+              "version": null,
+              "bannerText": null
+            },
+            {
+              "device": "IOS_TABLET",
+              "lang": "en",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+              "version": null,
+              "bannerText": null
+            },
+            {
+              "device": "IOS_MOBILE",
+              "lang": "en",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+              "version": null,
+              "bannerText": null
+            }
+          ],
+          "type": "ALL",
+          "action": {
+            "type": "EXTERNAL",
+            "url": "https://google.com/"
+          },
+          "opacity": 50.0,
+          "duration": 30000,
+          "displayCount": 2,
+          "displayInterval": 1000,
+          "delayedDisplay": 0,
+          "width": 0,
+          "height": 0,
+          "marginHeight": 0,
+          "closeButtonDelay": 0,
+          "closeButton": true,
+          "firstLogin": false,
+          "campaignName": "test",
+          "campaignExpiredDate": 1587970546197,
+          "campaignStartDate": 1587970546200,
+          "priority": 4,
+          "campaignContentType": "IMAGE"
+        }
+      },
+      "CampaignDataParam": {
+        "title": "CampaignDataParam",
+        "required": [
+          "device",
+          "lang",
+          "url",
+          "version",
+          "bannerText"
+        ],
+        "type": "object",
+        "properties": {
+          "device": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "bannerText": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "example": {
+          "device": "INDIGO_WEB",
+          "lang": "en",
+          "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/za/za-en",
+          "version": null,
+          "bannerText": null
+        }
+      },
+      "Action": {
+        "title": "Action",
+        "required": [
+          "type",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "type": "EXTERNAL",
+          "url": "https://google.com/"
+        }
+      },
+      "/icampaigns/api/campaignsHTMLRequest": {
+        "title": "/icampaigns/api/campaignsHTMLRequest",
+        "required": [
+          "enabled",
+          "campaignDataParams",
+          "type",
+          "action",
+          "opacity",
+          "duration",
+          "displayCount",
+          "displayInterval",
+          "delayedDisplay",
+          "width",
+          "height",
+          "marginHeight",
+          "closeButtonDelay",
+          "closeButton",
+          "firstLogin",
+          "campaignName",
+          "campaignExpiredDate",
+          "campaignStartDate",
+          "priority",
+          "campaignContentType",
+          "expression",
+          "allowedFields"
+        ],
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "campaignDataParams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CampaignDataParam1"
+            },
+            "description": ""
+          },
+          "type": {
+            "type": "string"
+          },
+          "action": {
+            "$ref": "#/components/schemas/Action1"
+          },
+          "opacity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "displayCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "displayInterval": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "delayedDisplay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "width": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "height": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "marginHeight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "closeButtonDelay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "closeButton": {
+            "type": "boolean"
+          },
+          "firstLogin": {
+            "type": "boolean"
+          },
+          "campaignName": {
+            "type": "string"
+          },
+          "campaignExpiredDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "campaignStartDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "campaignContentType": {
+            "type": "string"
+          },
+          "expression": {
+            "type": "string"
+          },
+          "allowedFields": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "example": {
+          "enabled": true,
+          "campaignDataParams": [
+            {
+              "device": "ANDROID_MOBILE",
+              "lang": "en",
+              "htmlContent": "<div>Test</div>",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/Test_123/Test_123-en"
+            },
+            {
+              "device": "ANDROID_TABLET",
+              "lang": "en",
+              "htmlContent": "<div>Test</div>",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/Test_123/Test_123-en"
+            },
+            {
+              "device": "IOS_MOBILE",
+              "lang": "en",
+              "htmlContent": "<div>Test</div>",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/Test_123/Test_123-en"
+            },
+            {
+              "device": "IOS_TABLET",
+              "lang": "en",
+              "htmlContent": "<div>Test</div>",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/Test_123/Test_123-en"
+            },
+            {
+              "device": "INDIGO_MOBILE",
+              "lang": "en",
+              "htmlContent": "<div>Test</div>",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/Test_123/Test_123-en"
+            },
+            {
+              "device": "INDIGO_WEB",
+              "lang": "en",
+              "htmlContent": "<div>Test</div>",
+              "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/Test_123/Test_123-en"
+            }
+          ],
+          "type": "ASSIGNED",
+          "action": {
+            "type": "EXTERNAL",
+            "url": null
+          },
+          "opacity": 80,
+          "duration": 30000,
+          "displayCount": 2,
+          "displayInterval": 60000,
+          "delayedDisplay": 0,
+          "width": 0,
+          "height": 0,
+          "marginHeight": 0,
+          "closeButtonDelay": 0,
+          "closeButton": true,
+          "firstLogin": false,
+          "campaignName": "Test_123",
+          "campaignExpiredDate": 1588032000000,
+          "campaignStartDate": 1587945600000,
+          "priority": 5,
+          "campaignContentType": "HTML_PAGE",
+          "expression": "true",
+          "allowedFields": null
+        }
+      },
+      "CampaignDataParam1": {
+        "title": "CampaignDataParam1",
+        "required": [
+          "device",
+          "lang",
+          "htmlContent",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "device": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          },
+          "htmlContent": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "device": "ANDROID_MOBILE",
+          "lang": "en",
+          "htmlContent": "<div>Test</div>",
+          "url": "https://cosmos-qa-live.markets.com/icampaigns/campaigns/display/Test_123/Test_123-en"
+        }
+      },
+      "Action1": {
+        "title": "Action1",
+        "required": [
+          "type",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "example": {
+          "type": "EXTERNAL",
+          "url": null
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
